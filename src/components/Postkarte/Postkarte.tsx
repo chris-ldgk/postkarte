@@ -1,9 +1,9 @@
 import { Mesh, MeshStandardMaterial, Group } from "three";
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { GLTF } from "three/examples/jsm/loaders/GLTFLoader";
-import PostkarteModel from "../../assets/postkarte.glb";
+import { GLTF } from "three/examples/jsm/loaders/GLTFLoader.js";
+import PostkarteModel from "../../assets/postkarte.glb?url";
 import { useSpring } from "framer-motion";
 import { useEffect } from "react";
 
@@ -32,7 +32,7 @@ export function Postkarte({ ...props }: PostkarteProps) {
     damping: 40,
     mass: 1.0,
   });
-  const group = useRef<Group>();
+  const group = useRef<Group>(null);
   const { materials, nodes } = useGLTF(PostkarteModel) as unknown as GLTFResult;
 
   useFrame(() => {

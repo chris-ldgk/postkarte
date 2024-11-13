@@ -1,11 +1,10 @@
-import { FC, useEffect, useRef } from "react";
-import { Canvas as ThreeCanvas, useThree } from "@react-three/fiber";
-import { softShadows } from "@react-three/drei";
-import { Renderer } from "three";
+import { PropsWithChildren, useEffect } from "react";
+import { Canvas as ThreeCanvas } from "@react-three/fiber";
+// import { SoftShadows } from "@react-three/drei";
 
-softShadows();
+// SoftShadows();
 
-export const Canvas: FC = ({ children }) => {
+export const Canvas = ({ children }: PropsWithChildren) => {
   useEffect(() => {}, []);
 
   return <ThreeCanvas shadows>{children}</ThreeCanvas>;

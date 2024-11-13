@@ -6,7 +6,7 @@ import { OrthographicCamera as THREEOrthographicCamera } from "three";
 import { RootState, useThree } from "@react-three/fiber";
 
 export const Scene = () => {
-  const camRef = useRef<THREEOrthographicCamera>();
+  const camRef = useRef<THREEOrthographicCamera>(null);
   const [aspectRatioBiggerOne, setAspectRatioBiggerOne] =
     useState<boolean>(false);
 

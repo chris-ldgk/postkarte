@@ -1,7 +1,7 @@
-import React, { Suspense } from "react";
-import { Canvas } from "./components/Canvas";
-import styled from "styled-components";
+import { Suspense } from "react";
+import styled from "@emotion/styled";
 import { Scene } from "./components/Scene";
+import { Canvas } from "./components/Canvas";
 
 const StyledApp = styled.div`
   width: 100vw;
